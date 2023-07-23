@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main.ui'
+## Form generated from reading UI file 'Main.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.0.3
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
 
 
 class Ui_MainWindow(object):
@@ -22,9 +22,9 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.lb_les_vols = QLabel(self.centralwidget)
         self.lb_les_vols.setObjectName(u"lb_les_vols")
-        self.lb_les_vols.setGeometry(QRect(60, 30, 141, 21))
+        self.lb_les_vols.setGeometry(QRect(190, 10, 171, 31))
         font = QFont()
-        font.setPointSize(18)
+        font.setPointSize(23)
         self.lb_les_vols.setFont(font)
         self.pb_afficher = QPushButton(self.centralwidget)
         self.pb_afficher.setObjectName(u"pb_afficher")
@@ -43,30 +43,6 @@ class Ui_MainWindow(object):
         self.lv_les_vols = QListWidget(self.centralwidget)
         self.lv_les_vols.setObjectName(u"lv_les_vols")
         self.lv_les_vols.setGeometry(QRect(40, 80, 256, 411))
-        self.lb_Resume = QLabel(self.centralwidget)
-        self.lb_Resume.setObjectName(u"lb_Resume")
-        self.lb_Resume.setGeometry(QRect(580, 30, 81, 21))
-        font2 = QFont()
-        font2.setPointSize(13)
-        self.lb_Resume.setFont(font2)
-        self.lb_temps_vol = QLabel(self.centralwidget)
-        self.lb_temps_vol.setObjectName(u"lb_temps_vol")
-        self.lb_temps_vol.setGeometry(QRect(480, 80, 111, 21))
-        font3 = QFont()
-        font3.setPointSize(12)
-        self.lb_temps_vol.setFont(font3)
-        self.lb_resultat_temps_vol = QLabel(self.centralwidget)
-        self.lb_resultat_temps_vol.setObjectName(u"lb_resultat_temps_vol")
-        self.lb_resultat_temps_vol.setGeometry(QRect(590, 80, 111, 21))
-        self.lb_resultat_temps_vol.setFont(font3)
-        self.lb_km = QLabel(self.centralwidget)
-        self.lb_km.setObjectName(u"lb_km")
-        self.lb_km.setGeometry(QRect(480, 110, 111, 21))
-        self.lb_km.setFont(font3)
-        self.lb_resultat_km = QLabel(self.centralwidget)
-        self.lb_resultat_km.setObjectName(u"lb_resultat_km")
-        self.lb_resultat_km.setGeometry(QRect(590, 110, 111, 21))
-        self.lb_resultat_km.setFont(font3)
         self.pb_afficher_detail = QPushButton(self.centralwidget)
         self.pb_afficher_detail.setObjectName(u"pb_afficher_detail")
         self.pb_afficher_detail.setGeometry(QRect(330, 250, 121, 51))
@@ -75,6 +51,41 @@ class Ui_MainWindow(object):
         self.pb_quitter.setObjectName(u"pb_quitter")
         self.pb_quitter.setGeometry(QRect(330, 310, 121, 51))
         self.pb_quitter.setFont(font1)
+        self.lb_Main_deco = QLabel(self.centralwidget)
+        self.lb_Main_deco.setObjectName(u"lb_Main_deco")
+        self.lb_Main_deco.setGeometry(QRect(50, 60, 49, 16))
+        self.lb_Main_deco_2 = QLabel(self.centralwidget)
+        self.lb_Main_deco_2.setObjectName(u"lb_Main_deco_2")
+        self.lb_Main_deco_2.setGeometry(QRect(110, 60, 61, 16))
+        self.lb_Main_duree = QLabel(self.centralwidget)
+        self.lb_Main_duree.setObjectName(u"lb_Main_duree")
+        self.lb_Main_duree.setGeometry(QRect(180, 60, 61, 16))
+        self.groupBox = QGroupBox(self.centralwidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.groupBox.setGeometry(QRect(470, 140, 241, 121))
+        font2 = QFont()
+        font2.setBold(True)
+        self.groupBox.setFont(font2)
+        self.groupBox.setFlat(False)
+        self.lb_temps_vol = QLabel(self.groupBox)
+        self.lb_temps_vol.setObjectName(u"lb_temps_vol")
+        self.lb_temps_vol.setGeometry(QRect(10, 40, 111, 21))
+        font3 = QFont()
+        font3.setPointSize(12)
+        font3.setBold(True)
+        self.lb_temps_vol.setFont(font3)
+        self.lb_resultat_km = QLabel(self.groupBox)
+        self.lb_resultat_km.setObjectName(u"lb_resultat_km")
+        self.lb_resultat_km.setGeometry(QRect(130, 70, 91, 21))
+        self.lb_resultat_km.setFont(font3)
+        self.lb_resultat_temps_vol = QLabel(self.groupBox)
+        self.lb_resultat_temps_vol.setObjectName(u"lb_resultat_temps_vol")
+        self.lb_resultat_temps_vol.setGeometry(QRect(130, 40, 91, 21))
+        self.lb_resultat_temps_vol.setFont(font3)
+        self.lb_km = QLabel(self.groupBox)
+        self.lb_km.setObjectName(u"lb_km")
+        self.lb_km.setGeometry(QRect(10, 70, 111, 21))
+        self.lb_km.setFont(font3)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -90,17 +101,20 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Parapente", None))
         self.lb_les_vols.setText(QCoreApplication.translate("MainWindow", u"Les vols :", None))
         self.pb_afficher.setText(QCoreApplication.translate("MainWindow", u"Afficher les vols", None))
         self.pb_ajouter_vol.setText(QCoreApplication.translate("MainWindow", u"Ajouter un vol", None))
         self.pb_supprimer_vol.setText(QCoreApplication.translate("MainWindow", u"Supprimer un vol", None))
-        self.lb_Resume.setText(QCoreApplication.translate("MainWindow", u"R\u00e9sum\u00e9 :", None))
-        self.lb_temps_vol.setText(QCoreApplication.translate("MainWindow", u"Temps de vol :", None))
-        self.lb_resultat_temps_vol.setText("")
-        self.lb_km.setText(QCoreApplication.translate("MainWindow", u"KM parcouru :", None))
-        self.lb_resultat_km.setText("")
         self.pb_afficher_detail.setText(QCoreApplication.translate("MainWindow", u"Afficher d\u00e9tail", None))
         self.pb_quitter.setText(QCoreApplication.translate("MainWindow", u"Quitter", None))
+        self.lb_Main_deco.setText(QCoreApplication.translate("MainWindow", u"Date |", None))
+        self.lb_Main_deco_2.setText(QCoreApplication.translate("MainWindow", u"D\u00e9collage |", None))
+        self.lb_Main_duree.setText(QCoreApplication.translate("MainWindow", u"Dur\u00e9e", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"R\u00e9sum\u00e9", None))
+        self.lb_temps_vol.setText(QCoreApplication.translate("MainWindow", u"Temps de vol :", None))
+        self.lb_resultat_km.setText("")
+        self.lb_resultat_temps_vol.setText("")
+        self.lb_km.setText(QCoreApplication.translate("MainWindow", u"KM parcouru :", None))
     # retranslateUi
 

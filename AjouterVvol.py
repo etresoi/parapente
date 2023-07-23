@@ -1,12 +1,12 @@
 from Mongo import ConnMongo
 from ui.Ajouter_vol_ui import Ui_Ajouter_vol
-import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
+from datetime import datetime
+from PySide6.QtWidgets import QWidget
 
 
-
-class Ajouter_vol(QWidget,Ui_Ajouter_vol):
+class AjouterVvol(QWidget, Ui_Ajouter_vol):
     def __init__(self):
+        super().__init__()
         self.form = QWidget()
         self.fenetre = Ui_Ajouter_vol()
         self.fenetre.setupUi(self.form)  # Créer une instance unique de Ui_Ajouter_vol
@@ -16,10 +16,13 @@ class Ajouter_vol(QWidget,Ui_Ajouter_vol):
         conn = ConnMongo()
         self.form.show()
         self.fenetre.lb_Vol_enregistre.hide()
+        self.fenetre.pb_fermer_ajouter_vol.clicked.connect(self.form.close)
 
         def ajouter_vol():
+            date_str = self.fenetre.le_date.text()
+            date_obj = datetime.strptime(date_str, "%d.%m.%Y")
             vol = {
-                "Date": self.fenetre.le_date.text(),
+                "Date": date_obj,
                 "Decollage": self.fenetre.le_decollage.text(),
                 "Aterrissage": self.fenetre.le_atterissage.text(),
                 "Distance": self.fenetre.le_distance.text(),
@@ -51,8 +54,6 @@ class Ajouter_vol(QWidget,Ui_Ajouter_vol):
             self.fenetre.le_vitesse_moyenne.clear()
 
         self.fenetre.pb_ajouter_vol.clicked.connect(ajouter_vol)
-
-
 
     # Alimente le combobox "voile" pour choix de voile dans ajouter un vol
     def alimente_list_voile(self):

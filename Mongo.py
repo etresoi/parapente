@@ -9,11 +9,12 @@ class ConnMongo:
     collectionClient = db.vols
 
     def recherche_vols(self):
-        vols = self.collectionClient.find()
+        vols = self.collectionClient.find().sort("Date", -1)
         self.liste_vols = []
 
         for vol in vols:
             self.liste_vols.append(vol)
+
         return self.liste_vols
 
     def ajouter_un_vol(self, vol):
@@ -30,17 +31,18 @@ class ConnMongo:
         return liste
 
     def total_distance(self):
-        req = [{"$group" : {"_id": "null", "dist_tot": {"$sum":"$Distance_cumulee"}}}]
+        req = [{"$group": {"_id": "null", "dist_tot": {"$sum": "$Distance_cumulee"}}}]
         res = self.collectionClient.aggregate(req)
+        r = 0
         for re in res:
             r = float(str(re["dist_tot"]))
-        return (r/1000)
+        return r/1000
 
     def total_temps(self):
-        req = [{"$group" : {"_id": "null", "temps_tot": {"$sum":"$Temps_vol"}}}]
+        req = [{"$group": {"_id": "null", "temps_tot": {"$sum": "$Temps_vol"}}}]
         res = self.collectionClient.aggregate(req)
+        minutes = 0
         for re in res:
             minutes = float(str(re["temps_tot"]))
         r = timedelta(minutes=minutes)
-        return (r)
-
+        return r

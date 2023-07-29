@@ -1,3 +1,4 @@
+from PySide6.QtCore import QEvent
 from Mongo import ConnMongo
 from ui.Ajouter_vol_ui import Ui_Ajouter_vol
 from datetime import datetime
@@ -10,6 +11,8 @@ class AjouterVvol(QWidget, Ui_Ajouter_vol):
         self.form = QWidget()
         self.fenetre = Ui_Ajouter_vol()
         self.fenetre.setupUi(self.form)  # Créer une instance unique de Ui_Ajouter_vol
+        #Ajoute un listener pour supprimer le label "vol ajouté"
+        self.fenetre.le_date.installEventFilter(self)
 
     def affiche_ajouter_vol(self):
         self.alimente_list_voile()
@@ -61,3 +64,11 @@ class AjouterVvol(QWidget, Ui_Ajouter_vol):
         liste = conn.recherche_voile()
         for elem in liste:
             self.fenetre.comboBox.addItem(elem)
+
+    def eventFilter(self, obj, event):
+        if obj == self.fenetre.le_date and event.type() == QEvent.FocusIn:
+            self.hidelabel()
+        return super().eventFilter(obj, event)
+
+    def hidelabel(self):
+        self.fenetre.lb_Vol_enregistre.hide()

@@ -2,7 +2,7 @@ from ui.Main_ui import Ui_MainWindow
 from ui.Ajouter_vol_ui import Ui_Ajouter_vol
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
-from AjouterVvol import AjouterVvol
+from AjouterVol import AjouterVvol
 from Mongo import ConnMongo
 
 

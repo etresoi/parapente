@@ -5,7 +5,7 @@ from datetime import datetime
 from PySide6.QtWidgets import QWidget
 
 
-class AjouterVvol(QWidget, Ui_Ajouter_vol):
+class AjouterVol(QWidget, Ui_Ajouter_vol):
     def __init__(self):
         super().__init__()
         self.form = QWidget()

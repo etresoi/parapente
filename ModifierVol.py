@@ -5,8 +5,12 @@ from PySide6.QtWidgets import QWidget
 
 class ModifierVol(QWidget, Ui_Detail_vol):
     def __init__(self):
-        super.__init__()
-        self.fen = QWidget
+        super().__init__()
+        self.fen = QWidget()
         self.fenetre_detail = Ui_Detail_vol()
         # Créer une instance unique
         self.fenetre_detail.setupUi(self.fen)
+
+
+    def affiche_modifier_vol(self):
+        self.fen.show()

@@ -7,6 +7,14 @@ from Mongo import ConnMongo
 from ModifierVol import ModifierVol
 
 
+def format_timedelta(td):
+    total_seconds = td.total_seconds()
+    hours = int(total_seconds // 3600)
+    minutes = int((total_seconds % 3600) // 60)
+    seconds = int(total_seconds % 60)
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
+
 class Vols(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super(Vols, self).__init__()
@@ -26,7 +34,8 @@ class Vols(QMainWindow, Ui_MainWindow):
         tempsvol = connection.total_distance()
         self.lb_resultat_km.setText(str(tempsvol))
         km_total = connection.total_temps()
-        self.lb_resultat_temps_vol.setText(str(km_total))
+        km_total_str = format_timedelta(km_total)
+        self.lb_resultat_temps_vol.setText(str(km_total_str))
 
     def lance_affiche_ajouter_vol(self):
         aj_vol = AjouterVol()

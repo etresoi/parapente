@@ -72,7 +72,7 @@
     <rect>
      <x>50</x>
      <y>250</y>
-     <width>171</width>
+     <width>200</width>
      <height>30</height>
     </rect>
    </property>
@@ -82,7 +82,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Distance cumulée :</string>
+    <string>Distance cumulée (en m) :</string>
    </property>
   </widget>
   <widget class="QLabel" name="lb_distance">
@@ -250,9 +250,9 @@
   <widget class="QLineEdit" name="le_date">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>100</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -260,9 +260,9 @@
   <widget class="QLineEdit" name="le_decollage">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>130</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -270,9 +270,9 @@
   <widget class="QLineEdit" name="le_atterissage">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>160</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -280,9 +280,9 @@
   <widget class="QLineEdit" name="le_distance">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>220</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -290,9 +290,9 @@
   <widget class="QLineEdit" name="le_distance_cumulee">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>250</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -300,9 +300,9 @@
   <widget class="QLineEdit" name="le_vitesse_max">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>280</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -310,9 +310,9 @@
   <widget class="QLineEdit" name="le_vitesse_moyenne">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>310</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -320,9 +320,9 @@
   <widget class="QLineEdit" name="le_plafond">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>340</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -330,9 +330,9 @@
   <widget class="QLineEdit" name="le_gain">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>370</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -340,9 +340,9 @@
   <widget class="QLineEdit" name="le_temps_vol">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>400</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -350,9 +350,9 @@
   <widget class="QLineEdit" name="le_vario_max">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>430</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -360,9 +360,9 @@
   <widget class="QLineEdit" name="le_g_max">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>460</y>
-     <width>271</width>
+     <width>240</width>
      <height>21</height>
     </rect>
    </property>
@@ -442,9 +442,9 @@
   <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>190</y>
-     <width>271</width>
+     <width>240</width>
      <height>22</height>
     </rect>
    </property>

@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ajouter_vol.ui'
+## Form generated from reading UI file 'Ajouter_vol.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.0.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 
 class Ui_Ajouter_vol(object):
@@ -34,7 +34,7 @@ class Ui_Ajouter_vol(object):
         self.lb_decollage.setFont(font)
         self.lb_distance_cumulee = QLabel(Ajouter_vol)
         self.lb_distance_cumulee.setObjectName(u"lb_distance_cumulee")
-        self.lb_distance_cumulee.setGeometry(QRect(50, 250, 171, 30))
+        self.lb_distance_cumulee.setGeometry(QRect(50, 250, 200, 30))
         self.lb_distance_cumulee.setFont(font)
         self.lb_distance = QLabel(Ajouter_vol)
         self.lb_distance.setObjectName(u"lb_distance")
@@ -74,40 +74,40 @@ class Ui_Ajouter_vol(object):
         self.lb_g_max.setFont(font)
         self.le_date = QLineEdit(Ajouter_vol)
         self.le_date.setObjectName(u"le_date")
-        self.le_date.setGeometry(QRect(220, 100, 271, 21))
+        self.le_date.setGeometry(QRect(280, 100, 240, 21))
         self.le_decollage = QLineEdit(Ajouter_vol)
         self.le_decollage.setObjectName(u"le_decollage")
-        self.le_decollage.setGeometry(QRect(220, 130, 271, 21))
+        self.le_decollage.setGeometry(QRect(280, 130, 240, 21))
         self.le_atterissage = QLineEdit(Ajouter_vol)
         self.le_atterissage.setObjectName(u"le_atterissage")
-        self.le_atterissage.setGeometry(QRect(220, 160, 271, 21))
+        self.le_atterissage.setGeometry(QRect(280, 160, 240, 21))
         self.le_distance = QLineEdit(Ajouter_vol)
         self.le_distance.setObjectName(u"le_distance")
-        self.le_distance.setGeometry(QRect(220, 220, 271, 21))
+        self.le_distance.setGeometry(QRect(280, 220, 240, 21))
         self.le_distance_cumulee = QLineEdit(Ajouter_vol)
         self.le_distance_cumulee.setObjectName(u"le_distance_cumulee")
-        self.le_distance_cumulee.setGeometry(QRect(220, 250, 271, 21))
+        self.le_distance_cumulee.setGeometry(QRect(280, 250, 240, 21))
         self.le_vitesse_max = QLineEdit(Ajouter_vol)
         self.le_vitesse_max.setObjectName(u"le_vitesse_max")
-        self.le_vitesse_max.setGeometry(QRect(220, 280, 271, 21))
+        self.le_vitesse_max.setGeometry(QRect(280, 280, 240, 21))
         self.le_vitesse_moyenne = QLineEdit(Ajouter_vol)
         self.le_vitesse_moyenne.setObjectName(u"le_vitesse_moyenne")
-        self.le_vitesse_moyenne.setGeometry(QRect(220, 310, 271, 21))
+        self.le_vitesse_moyenne.setGeometry(QRect(280, 310, 240, 21))
         self.le_plafond = QLineEdit(Ajouter_vol)
         self.le_plafond.setObjectName(u"le_plafond")
-        self.le_plafond.setGeometry(QRect(220, 340, 271, 21))
+        self.le_plafond.setGeometry(QRect(280, 340, 240, 21))
         self.le_gain = QLineEdit(Ajouter_vol)
         self.le_gain.setObjectName(u"le_gain")
-        self.le_gain.setGeometry(QRect(220, 370, 271, 21))
+        self.le_gain.setGeometry(QRect(280, 370, 240, 21))
         self.le_temps_vol = QLineEdit(Ajouter_vol)
         self.le_temps_vol.setObjectName(u"le_temps_vol")
-        self.le_temps_vol.setGeometry(QRect(220, 400, 271, 21))
+        self.le_temps_vol.setGeometry(QRect(280, 400, 240, 21))
         self.le_vario_max = QLineEdit(Ajouter_vol)
         self.le_vario_max.setObjectName(u"le_vario_max")
-        self.le_vario_max.setGeometry(QRect(220, 430, 271, 21))
+        self.le_vario_max.setGeometry(QRect(280, 430, 240, 21))
         self.le_g_max = QLineEdit(Ajouter_vol)
         self.le_g_max.setObjectName(u"le_g_max")
-        self.le_g_max.setGeometry(QRect(220, 460, 271, 21))
+        self.le_g_max.setGeometry(QRect(280, 460, 240, 21))
         self.lb_ajouter_vol = QLabel(Ajouter_vol)
         self.lb_ajouter_vol.setObjectName(u"lb_ajouter_vol")
         self.lb_ajouter_vol.setGeometry(QRect(180, 20, 231, 61))
@@ -130,7 +130,7 @@ class Ui_Ajouter_vol(object):
         self.lb_Vol_enregistre.setFont(font2)
         self.comboBox = QComboBox(Ajouter_vol)
         self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setGeometry(QRect(220, 190, 271, 22))
+        self.comboBox.setGeometry(QRect(280, 190, 240, 22))
 
         self.retranslateUi(Ajouter_vol)
 
@@ -142,7 +142,7 @@ class Ui_Ajouter_vol(object):
         self.lb_date.setText(QCoreApplication.translate("Ajouter_vol", u"Date du vol :", None))
         self.lb_voile.setText(QCoreApplication.translate("Ajouter_vol", u"Voile :", None))
         self.lb_decollage.setText(QCoreApplication.translate("Ajouter_vol", u"D\u00e9collage :", None))
-        self.lb_distance_cumulee.setText(QCoreApplication.translate("Ajouter_vol", u"Distance cumul\u00e9e :", None))
+        self.lb_distance_cumulee.setText(QCoreApplication.translate("Ajouter_vol", u"Distance cumul\u00e9e (en m) :", None))
         self.lb_distance.setText(QCoreApplication.translate("Ajouter_vol", u"Distance :", None))
         self.lb_plafond.setText(QCoreApplication.translate("Ajouter_vol", u"Plafond :", None))
         self.lb_vitesse_moyenne.setText(QCoreApplication.translate("Ajouter_vol", u"Vitesse moyenne :", None))

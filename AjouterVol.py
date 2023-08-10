@@ -3,7 +3,7 @@ from Mongo import ConnMongo
 from ui.Ajouter_vol_ui import Ui_Ajouter_vol
 from datetime import datetime
 from PySide6.QtWidgets import QWidget
-
+from bson import Decimal128
 
 class AjouterVol(QWidget, Ui_Ajouter_vol):
     def __init__(self):
@@ -28,16 +28,16 @@ class AjouterVol(QWidget, Ui_Ajouter_vol):
                 "Date": date_obj,
                 "Decollage": self.fenetre.le_decollage.text(),
                 "Aterrissage": self.fenetre.le_atterissage.text(),
-                "Distance": self.fenetre.le_distance.text(),
+                "Distance": Decimal128(self.fenetre.le_distance.text()),
                 "Voile": self.fenetre.comboBox.currentText(),
-                "Distance_cumulee": self.fenetre.le_distance_cumulee.text(),
-                "Vitesse_max": self.fenetre.le_vitesse_max.text(),
-                "Vitesse_moyenne": self.fenetre.le_vitesse_moyenne.text(),
-                "Plafond": self.fenetre.le_plafond.text(),
-                "Gain": self.fenetre.le_gain.text(),
-                "Temps_vol": self.fenetre.le_temps_vol.text(),
-                "Vario_max": self.fenetre.le_vario_max.text(),
-                "G-max": self.fenetre.le_g_max.text()
+                "Distance_cumulee": Decimal128(self.fenetre.le_distance_cumulee.text()),
+                "Vitesse_max": Decimal128(self.fenetre.le_vitesse_max.text()),
+                "Vitesse_moyenne": Decimal128(self.fenetre.le_vitesse_moyenne.text()),
+                "Plafond": Decimal128(self.fenetre.le_plafond.text()),
+                "Gain": Decimal128(self.fenetre.le_gain.text()),
+                "Temps_vol": Decimal128(self.fenetre.le_temps_vol.text()),
+                "Vario_max": Decimal128(self.fenetre.le_vario_max.text()),
+                "G-max": Decimal128(self.fenetre.le_g_max.text())
             }
             conn.ajouter_un_vol(vol)
             self.fenetre.lb_Vol_enregistre.show()
